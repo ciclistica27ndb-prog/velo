@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="velo_ink">#F2EFE9</color>
+    <color name="velo_paper">#101216</color>
+    <color name="velo_card">#1A1D23</color>
+    <color name="velo_accent">#FF8A5B</color>
+    <color name="velo_on_accent">#1A0E08</color>
+    <color name="velo_accent_soft">#3A2419</color>
+    <color name="velo_muted">#A0A5B0</color>
+    <color name="velo_line">#2B2F37</color>
+    <color name="velo_ok">#4CC38A</color>
+    <color name="velo_off">#5C616C</color>
+    <color name="velo_warn">#F2A33A</color>
+</resources>

@@ -1,0 +1,14 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+# La chiave di firma resta solo sul PC (repository pubblico)
+*.keystore
+velo.apk
+update.json
+build-log.txt

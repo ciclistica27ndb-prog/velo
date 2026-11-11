@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="velo_ink">#14171F</color>
+    <color name="velo_paper">#F6F3EE</color>
+    <color name="velo_card">#FFFFFF</color>
+    <color name="velo_accent">#C2410C</color>
+    <color name="velo_on_accent">#FFFFFF</color>
+    <color name="velo_accent_soft">#FBE3D6</color>
+    <color name="velo_muted">#626773</color>
+    <color name="velo_line">#E6E1D9</color>
+    <color name="velo_ok">#2F9E6A</color>
+    <color name="velo_off">#A3A7B0</color>
+    <color name="velo_warn">#D97706</color>
+
+    <!-- Colori fissi della bolla flottante e dell'icona (non dipendono dal tema) -->
+    <color name="bubble_fill">#14171F</color>
+    <color name="bubble_fill_paused">#3A3E47</color>
+    <color name="bubble_accent">#FF7A45</color>
+    <color name="launcher_bg">#14171F</color>
+</resources>

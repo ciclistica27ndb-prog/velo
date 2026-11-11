@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Velo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/velo_accent</item>
+        <item name="colorOnPrimary">@color/velo_on_accent</item>
+        <item name="colorPrimaryContainer">@color/velo_accent_soft</item>
+        <item name="colorOnPrimaryContainer">@color/velo_ink</item>
+        <item name="colorSecondary">@color/velo_ink</item>
+        <item name="colorSecondaryContainer">@color/velo_accent_soft</item>
+        <item name="colorOnSecondaryContainer">@color/velo_ink</item>
+        <item name="android:colorBackground">@color/velo_paper</item>
+        <item name="colorSurface">@color/velo_paper</item>
+        <item name="colorOnSurface">@color/velo_ink</item>
+        <item name="colorOnSurfaceVariant">@color/velo_muted</item>
+        <item name="colorOutline">@color/velo_line</item>
+        <item name="colorOutlineVariant">@color/velo_line</item>
+    </style>
+
+    <style name="Velo.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/velo_card</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="contentPadding">20dp</item>
+    </style>
+
+    <style name="Velo.Text.Overline" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">@color/velo_muted</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.12</item>
+    </style>
+
+    <style name="Velo.Text.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/velo_ink</item>
+    </style>
+
+    <style name="Velo.Text.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/velo_muted</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+</resources>

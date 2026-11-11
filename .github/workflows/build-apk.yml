@@ -1,0 +1,65 @@
+name: Pubblica Velo
+
+# A ogni push su main: compila l'APK firmato con la chiave di Velo e lo pubblica come
+# release. L'app legge update.json dall'ultima release e propone l'aggiornamento.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: android-actions/setup-android@v3
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      # La chiave di firma non è nel repository: arriva da un secret.
+      # Deve essere sempre la stessa, altrimenti gli aggiornamenti non si installano.
+      - name: Chiave di firma
+        env:
+          KEYSTORE_B64: ${{ secrets.VELO_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "::error::Manca il secret VELO_KEYSTORE_B64"
+            exit 1
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > app/velo-debug.keystore
+
+      - name: Compila
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon veloRelease
+
+      - name: Pubblica la release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DIR=app/build/velo-release
+          VERSION=$(python3 -c "import json;print(json.load(open('$DIR/update.json'))['versionName'])")
+          NOTES=$(python3 -c "import json;print(json.load(open('$DIR/update.json'))['notes'])")
+          TAG="v$VERSION"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" "$DIR/velo.apk" "$DIR/update.json" --clobber
+            gh release edit "$TAG" --latest
+          else
+            gh release create "$TAG" "$DIR/velo.apk" "$DIR/update.json" \
+              --title "Velo $VERSION" \
+              --notes "$NOTES" \
+              --latest
+          fi

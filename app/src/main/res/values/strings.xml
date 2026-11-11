@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Velo</string>
+    <string name="tagline">Traduce in italiano tutto ciò che vedi sullo schermo, sopra qualsiasi app.</string>
+
+    <!-- Stato -->
+    <string name="section_status">Stato</string>
+    <string name="state_off">Spento</string>
+    <string name="state_starting">Avvio in corso…</string>
+    <string name="state_active">Attivo</string>
+    <string name="state_paused">In pausa</string>
+    <string name="state_off_detail">Avvia e scegli «Schermo intero» quando Android chiede di condividere lo schermo.</string>
+    <string name="state_off_detail_a11y">Tocca Avvia: Velo inizia subito, senza chiedere di condividere lo schermo.</string>
+    <string name="state_active_detail">Apri un\'app qualsiasi: il testo straniero verrà coperto dalla traduzione.</string>
+    <string name="state_paused_detail">Tocca la bolla flottante per riprendere.</string>
+    <string name="action_start">Avvia traduzione</string>
+    <string name="action_stop">Ferma</string>
+    <string name="capture_denied">Senza il permesso di condividere lo schermo Velo non può leggere il testo.</string>
+    <string name="overlay_needed">Prima concedi «Mostra sopra le altre app».</string>
+
+    <!-- Permessi -->
+    <string name="section_permissions">Permessi</string>
+    <string name="perm_overlay_title">Mostra sopra le altre app</string>
+    <string name="perm_overlay_desc">Serve per disegnare le traduzioni sopra il testo.</string>
+    <string name="perm_notif_title">Notifiche</string>
+    <string name="perm_notif_desc">Per i comandi Pausa e Ferma anche dalla tendina.</string>
+    <string name="perm_grant">Concedi</string>
+    <string name="perm_granted">Concesso</string>
+
+    <!-- Impostazioni -->
+    <string name="section_settings">Impostazioni</string>
+    <string name="setting_source">Lingua del testo da tradurre</string>
+    <string name="setting_source_auto">Rilevamento automatico</string>
+    <string name="setting_script">Alfabeto da leggere</string>
+    <string name="setting_script_help">Con il rilevamento automatico Velo legge un alfabeto alla volta. L\'alfabeto latino copre inglese, francese, spagnolo, tedesco, portoghese e molte altre lingue.</string>
+    <string name="script_latin">Latino</string>
+    <string name="script_chinese">Cinese</string>
+    <string name="script_japanese">Giapponese</string>
+    <string name="script_korean">Coreano</string>
+    <string name="script_devanagari">Devanagari</string>
+    <string name="setting_mobile_data">Scarica pacchetti lingua anche con i dati mobili</string>
+    <string name="setting_mobile_data_desc">Ogni lingua pesa circa 30 MB e si scarica una sola volta.</string>
+
+    <!-- Pacchetti lingua -->
+    <string name="section_models">Pacchetti lingua</string>
+    <string name="models_none">Nessuno ancora. Velo scarica automaticamente la lingua la prima volta che la incontra; dopo funziona anche offline.</string>
+    <string name="models_list">Disponibili offline: %1$s</string>
+    <string name="models_manage">Gestisci</string>
+    <string name="models_dialog_title">Elimina pacchetti lingua</string>
+    <string name="models_delete">Elimina</string>
+    <string name="models_cancel">Annulla</string>
+    <string name="models_deleted">Pacchetti eliminati</string>
+
+    <!-- Guida -->
+    <string name="section_help">Come si usa</string>
+    <string name="help_1">Quando scorri o cambi schermata le traduzioni spariscono e ricompaiono appena il contenuto è fermo.</string>
+    <string name="help_2">Bolla flottante: tocca per mettere in pausa, tieni premuto per aprire Velo, trascinala dove vuoi.</string>
+    <string name="help_3">Le app protette (banche, Netflix, alcune chat) appaiono nere ad Android e non possono essere tradotte.</string>
+    <string name="help_4">Traduzione e lettura del testo avvengono sul telefono: le schermate non vengono inviate a nessuno.</string>
+
+    <!-- Servizio e notifiche -->
+    <string name="channel_name">Traduzione dello schermo</string>
+    <string name="notif_active_title">Velo sta traducendo lo schermo</string>
+    <string name="notif_paused_title">Velo è in pausa</string>
+    <string name="notif_active_text">Le traduzioni compaiono sopra il testo</string>
+    <string name="notif_paused_text">Tocca Riprendi per continuare</string>
+    <string name="notif_pause">Pausa</string>
+    <string name="notif_resume">Riprendi</string>
+    <string name="notif_stop">Ferma</string>
+    <string name="status_downloading">Scarico %1$s (una sola volta)…</string>
+    <string name="status_need_wifi">Collegati al Wi-Fi per scaricare %1$s</string>
+    <string name="status_download_failed">Download di %1$s non riuscito, riprovo tra poco</string>
+    <string name="bubble_description">Velo: tocca per mettere in pausa, tieni premuto per aprire l\'app</string>
+
+    <!-- Accessibilità -->
+    <string name="a11y_label">Velo – traduzione dello schermo</string>
+    <string name="a11y_description">Velo usa l\'Accessibilità solo per due cose: sapere quando lo schermo cambia (scorrimento, cambio app) e catturarlo per leggere il testo da tradurre. Tutto avviene sul telefono: Velo non legge i campi, non registra cosa scrivi e non invia schermate a nessuno.</string>
+    <string name="section_mode">Modalità precisa</string>
+    <string name="mode_title_on">Attiva</string>
+    <string name="mode_title_off">Da attivare (consigliata)</string>
+    <string name="mode_desc">Copre il testo con lo sfondo pieno, senza trasparenze, e non chiede di condividere lo schermo a ogni avvio. Si attiva una volta sola da Impostazioni → Accessibilità → App installate → Velo.</string>
+    <string name="mode_restricted">Se l\'interruttore è grigio («Impostazione con restrizioni»): tocca «Sblocca», poi in alto a destra ⋮ → «Consenti impostazioni con restrizioni», e riprova.</string>
+    <string name="mode_open_settings">Apri Accessibilità</string>
+    <string name="mode_unlock">Sblocca</string>
+    <string name="mode_unsupported">Richiede Android 11 o successivo: su questo telefono Velo usa la condivisione dello schermo.</string>
+    <string name="mode_starting">Il servizio di Accessibilità si sta avviando, riprova tra un istante.</string>
+
+    <!-- Motore di traduzione -->
+    <string name="setting_engine">Motore di traduzione</string>
+    <string name="engine_offline">Offline</string>
+    <string name="engine_deepl">DeepL</string>
+    <string name="engine_claude">Claude</string>
+    <string name="engine_offline_desc">Gratis e privato: tutto resta sul telefono. Qualità discreta.</string>
+    <string name="engine_deepl_desc">Qualità molto alta. Serve una chiave API DeepL (gratis fino a 500.000 caratteri al mese su deepl.com/pro-api). Il testo letto viene inviato a DeepL; le immagini dello schermo no.</string>
+    <string name="engine_claude_desc">Traduce l\'intera schermata tenendo conto del contesto. Serve una chiave API Anthropic (a consumo, console.anthropic.com). Il testo letto viene inviato ad Anthropic; le immagini dello schermo no.</string>
+    <string name="engine_key_hint">Chiave API</string>
+    <string name="engine_key_missing">Senza chiave Velo usa la traduzione offline.</string>
+    <string name="status_online_failed">%1$s non raggiungibile: uso la traduzione offline</string>
+
+    <!-- Aggiornamenti -->
+    <string name="section_updates">Aggiornamenti</string>
+    <string name="update_current">Versione installata: %1$s</string>
+    <string name="update_check">Cerca aggiornamenti</string>
+    <string name="update_checking">Controllo in corso…</string>
+    <string name="update_uptodate">Hai già la versione più recente.</string>
+    <string name="update_available">Nuova versione %1$s disponibile</string>
+    <string name="update_install">Aggiorna ora</string>
+    <string name="update_downloading">Scarico l\'aggiornamento… %1$d%%</string>
+    <string name="update_installing">Installazione: conferma se Android lo chiede.</string>
+    <string name="update_failed">Aggiornamento non riuscito: %1$s</string>
+    <string name="update_not_configured">Gli aggiornamenti dall\'app non sono ancora collegati a un indirizzo di pubblicazione.</string>
+    <string name="update_need_permission">Consenti a Velo di installare app (serve una volta sola), poi torna qui e tocca di nuovo «Aggiorna ora».</string>
+    <string name="update_keep_data">Le impostazioni e i pacchetti lingua vengono conservati.</string>
+</resources>
