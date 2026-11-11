@@ -25,8 +25,7 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - uses: android-actions/setup-android@v3
-
+      # L'Android SDK è già installato sui runner ubuntu-latest (ANDROID_HOME).
       - uses: gradle/actions/setup-gradle@v4
 
       # La chiave di firma non è nel repository: arriva da un secret.
